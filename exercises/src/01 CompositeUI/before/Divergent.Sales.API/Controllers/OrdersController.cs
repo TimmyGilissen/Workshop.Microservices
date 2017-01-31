@@ -31,7 +31,8 @@ namespace Sales.API.Controllers
                 {
                     o.Id,
                     o.CustomerId,
-                    ProductIds = o.Items.Select(i => i.Product.Id)
+                    ProductIds = o.Items.Select(i => i.Product.Id),
+                    ItemsCount = o.Items.Count
                 });
         }
     }
