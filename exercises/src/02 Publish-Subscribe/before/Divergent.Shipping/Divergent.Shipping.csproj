@@ -107,6 +107,8 @@
   <ItemGroup>
     <Compile Include="Config\ContainerSetup.cs" />
     <Compile Include="Config\EndpointConfig.cs" />
+    <Compile Include="Handlers\OrderSubmittedHandler.cs" />
+    <Compile Include="Handlers\PaymentSucceededHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +122,10 @@
       <Project>{01CCC8E0-605E-417D-BF33-30881F65A49B}</Project>
       <Name>Divergent.Finance.Messages</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Divergent.Finance\Divergent.Finance.csproj">
+      <Project>{3EE37732-A31A-408D-AC60-2FBF08D09B56}</Project>
+      <Name>Divergent.Finance</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Divergent.Sales.Messages\Divergent.Sales.Messages.csproj">
       <Project>{FD850B7B-46A5-43EC-9571-C13736E6B033}</Project>
       <Name>Divergent.Sales.Messages</Name>
@@ -130,9 +136,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Handlers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

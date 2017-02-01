@@ -8,5 +8,6 @@ namespace Divergent.Sales.Messages.Commands
         public int CustomerId { get; set; }
 
         public List<int> Products { get; set; }
+        public int OrderId { get; set; }
     }
 }
